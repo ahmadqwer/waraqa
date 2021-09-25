@@ -22,7 +22,6 @@ export default {
 <style lang="scss" scoped>
 .client {
   width: 25%;
-
   .client-logo {
     width: 197px;
     height: 56px;

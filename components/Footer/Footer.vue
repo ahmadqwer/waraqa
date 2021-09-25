@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer {
+.footer {
   background-color: $primary;
   .footer-wrapper {
     padding-top: 25px;

@@ -1,5 +1,5 @@
 <template>
-  <section id="clients" class="grid-container flexed-column">
+  <section class="clients grid-container flexed-column">
     <h2 class="section-title text-center bold-text secondary-text">
       عملاؤنا
     </h2>
@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 
-#clients {
+.clients {
     padding: 60px 0 55px;
     border-bottom:1px solid $border-color;
     & > p {

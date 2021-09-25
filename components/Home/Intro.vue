@@ -1,5 +1,5 @@
 <template>
-  <section id="intro" class="block-container">
+  <section class="intro block-container">
     <div class="intro-wrapper">
       <div class="intro-text-wrapper flexed-column justify-center">
         <p class="welcome white-text bold-text">
@@ -19,7 +19,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-#intro {
+.intro {
   position: relative;
   .intro-wrapper {
     background-image: url('~/assets/images/banner.png');

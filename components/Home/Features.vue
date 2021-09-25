@@ -1,5 +1,5 @@
 <template>
-  <section id="features" class="grid-container flexed-column">
+  <section class="features grid-container flexed-column">
     <h2 class="section-title text-center bold-text secondary-text">
       لماذا منصة ورقة
     </h2>
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#features {
+.features {
     padding: 60px 0 55px;
     border-bottom:1px solid $border-color;
     & > p {

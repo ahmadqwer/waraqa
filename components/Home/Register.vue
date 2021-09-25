@@ -1,5 +1,5 @@
 <template>
-  <section id="register" class="grid-container">
+  <section class="register grid-container">
     <h2 class="section-title text-center bold-text secondary-text">
       العمل كموظف مستقل
     </h2>
@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 
-#register {
+.register {
     padding-top: 60px;
     padding-bottom: 105px;
     border-bottom: 1px solid $border-color;
