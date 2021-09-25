@@ -6,7 +6,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - ورقة',
-    title: 'ورقة',
+    title: 'الصفحة الرئيسية',
     htmlAttrs: {
       lang: 'en'
     },
@@ -17,7 +17,7 @@ export default {
       { hid: 'keywords', name: 'keywords', content: 'Waraqa,ورقة,ورقه,تدقيق,مدقق,عمل مستقل,موظف مستقل' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/waraqa/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -43,7 +43,8 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/fontawesome',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-compress'
   ],
   fontawesome: {
     imports: [
@@ -58,7 +59,19 @@ export default {
     ],
   },
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          threshold: 8192,
+        },
+        brotli: {
+          threshold: 8192,
+        },
+      },
+    ],
+  ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -76,6 +89,13 @@ export default {
         }
       }
     }
+  },
+  render: {
+    // Setting up cache for 'static' directory - a year in milliseconds
+    // https://web.dev/uses-long-cache-ttl
+    static: {
+      maxAge: 60 * 60 * 24 * 365 * 1000,
+    },
   },
   router: {
     base: '/waraqa/'

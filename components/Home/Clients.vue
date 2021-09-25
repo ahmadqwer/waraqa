@@ -35,7 +35,7 @@ export default {
         },
         {
           name: 'Supermama',
-          logo: require('~/assets/svgs/supermama.svg'),
+          logo: require('~/assets/svgs/supermama.png'),
           link: 'https://Supermama.com/'
         },
         {

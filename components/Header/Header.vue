@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .header{
-    padding:20px 0;
+    padding-top:20px ;
+    padding-bottom:20px ;
 }
 </style>

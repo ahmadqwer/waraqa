@@ -22,7 +22,10 @@ export default {}
 .intro {
   position: relative;
   .intro-wrapper {
-    background-image: url('~/assets/images/banner.png');
+    background-image: url('~/assets/images/banner.jpg');
+    background-position: center;
+    border-top-right-radius: 88px;
+    border-bottom-left-radius: 88px;
   }
   .intro-text-wrapper {
     // position: absolute;
