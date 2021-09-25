@@ -1,5 +1,7 @@
 <template>
-  <header class="header block-container flexed justify-space-between align-center">
+  <header
+    class="header block-container flexed justify-space-between align-center"
+  >
     <Logo />
     <Links :links="links" />
   </header>
@@ -32,8 +34,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header{
-    padding-top:20px ;
-    padding-bottom:20px ;
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 </style>

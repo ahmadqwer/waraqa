@@ -70,6 +70,9 @@ export default {
     padding-top: 25px;
     padding-bottom: 10px;
     border-bottom: 1px solid $border-color;
+    @include responsive(mob) {
+      flex-direction: column;
+    }
     .footer-logo {
       filter: brightness(0%) invert(100%);
     }

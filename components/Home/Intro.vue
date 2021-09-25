@@ -21,6 +21,9 @@ export default {}
 <style lang="scss" scoped>
 .intro {
   position: relative;
+  @include responsive(tab) {
+   padding:0;
+  }
   .intro-wrapper {
     background-image: url('~/assets/images/banner.jpg');
     background-position: center;
@@ -28,13 +31,12 @@ export default {}
     border-bottom-left-radius: 88px;
   }
   .intro-text-wrapper {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // width: 100%;
-    // height: 100%;
     padding-right: 55px;
     height: 500px;
+    @include responsive(tab) {
+      height: 350px;
+      padding-right: 25px;
+    }
   }
   .button {
     margin-top: 40px;
@@ -42,9 +44,16 @@ export default {}
   .welcome {
     font-size: 40px;
     margin-bottom: 35px;
+    @include responsive(mob) {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
   }
   .caption {
     font-size: 20px;
+    @include responsive(mob) {
+      font-size: 16px;
+    }
   }
 }
 </style>

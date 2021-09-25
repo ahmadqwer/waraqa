@@ -36,17 +36,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .register {
-    padding-top: 60px;
-    padding-bottom: 105px;
-    border-bottom: 1px solid $border-color;
-    .section-title {
-        margin-bottom: 35px;
+  padding-top: 60px;
+  padding-bottom: 105px;
+  border-bottom: 1px solid $border-color;
+  .section-title {
+    margin-bottom: 35px;
+  }
+  & > p {
+    font-size: 20px;
+  }
+  .jobs{
+    @include responsive(mob){
+      flex-direction: column;
     }
-    & > p {
-        font-size: 20px;
-    }
+  }
 }
-
 </style>

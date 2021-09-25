@@ -26,6 +26,9 @@ export default {
 .feature {
   width: calc(100% / 3);
   margin-bottom: 35px;
+  @include responsive(mob) {
+    width: calc(100% / 2);
+  }
   .feature-icon {
     height: 85px;
     width: 85px;
@@ -38,6 +41,9 @@ export default {
     font-size: 20px;
     max-width: 150px;
     margin: 20px auto 0;
+    @include responsive(mob) {
+      font-size:17px;
+    }
   }
 }
 </style>

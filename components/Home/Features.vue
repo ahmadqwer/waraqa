@@ -59,7 +59,8 @@ export default {
 
 <style lang="scss" scoped>
 .features {
-    padding: 60px 0 55px;
+    padding-top:60px;
+    padding-bottom:55px;
     border-bottom:1px solid $border-color;
     & > p {
         font-size: 20px;

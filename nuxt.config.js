@@ -23,7 +23,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/styles.scss'],
   styleResources: {
-    scss: ['./assets/scss/_variables.scss']
+    scss: ['./assets/scss/_variables.scss','./assets/scss/_mixins.scss']
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,8 +44,12 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/fontawesome',
     '@nuxtjs/style-resources',
-    'nuxt-compress'
+    'nuxt-compress',
+    '@nuxtjs/device',
   ],
+  device: {
+    refreshOnResize: true
+  },
   fontawesome: {
     imports: [
       {

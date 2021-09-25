@@ -22,12 +22,24 @@ export default {
 <style lang="scss" scoped>
 .footer-links {
   width: 40%;
+  @include responsive(mob) {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom:10px;
+  }
   li {
     margin: 0 12.5px;
+    @include responsive(tab) {
+      margin: 10px 9px;
+    }
     a {
       text-decoration: none;
       color: $white;
       font-size: 18px;
+      @include responsive(tab) {
+        font-size: 16px;
+      }
     }
   }
 }

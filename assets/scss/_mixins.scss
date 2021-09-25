@@ -1,0 +1,19 @@
+@mixin responsive($media) {
+    @if $media == mob {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    } @else if $media == big {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    } @else if $media == op {
+        @media only screen and (min-width: $break-tablet + 1) {
+            @content;
+        }
+    } @else if $media == tab {
+        @media only screen and (max-width: $break-tablet) {
+            @content;
+        }
+    }
+}

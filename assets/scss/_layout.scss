@@ -52,7 +52,16 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-
+.hide-mobile{
+    @include responsive(tab){
+        display:none;
+    }
+}
+.hide-desktop{
+    @include responsive(op){
+        display:none;
+    }
+}
 .white-text {
     color: $white;
 }

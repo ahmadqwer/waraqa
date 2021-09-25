@@ -28,11 +28,22 @@ export default {
 .footer-social-links {
   width: 40%;
   text-align: left;
+  @include responsive(mob) {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
   li {
     margin-right: 40px;
+    @include responsive(mob) {
+      margin: 0 20px;
+    }
     a {
       color: $white;
       font-size: 25px;
+      @include responsive(mob) {
+        width: 14px;
+      }
     }
   }
 }
