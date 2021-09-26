@@ -4,6 +4,7 @@
       :href="client.link"
       class="flexed justify-center align-center"
       target="_blank"
+      rel="noopener"
     >
       <div class="client-logo flexed justify-center align-center">
         <img :src="client.logo" :alt="client.name">
