@@ -36,13 +36,19 @@ export default {
     border-radius: 50px;
     font-size: 35px;
     color: $tertiary;
+    transition: color 0.25s;
   }
   .feature-title {
     font-size: 20px;
     max-width: 150px;
     margin: 20px auto 0;
     @include responsive(mob) {
-      font-size:17px;
+      font-size: 17px;
+    }
+  }
+  &:hover {
+    .feature-icon {
+      color: $primary;
     }
   }
 }

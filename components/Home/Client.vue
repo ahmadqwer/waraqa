@@ -1,10 +1,14 @@
 <template>
   <div class="client flexed justify-center align-center">
-    <div class="client-logo flexed justify-center align-center">
-      <!-- <a :href="client.link" class="flexed justify-center align-center"> -->
-      <img :src="client.logo" :alt="client.name">
-      <!-- </a> -->
-    </div>
+    <a
+      :href="client.link"
+      class="flexed justify-center align-center"
+      target="_blank"
+    >
+      <div class="client-logo flexed justify-center align-center">
+        <img :src="client.logo" :alt="client.name">
+      </div>
+    </a>
   </div>
 </template>
 
@@ -23,7 +27,7 @@ export default {
 .client {
   width: 25%;
   @include responsive(mob) {
-    width: 50%;
+    width: auto;
   }
   .client-logo {
     width: 200px;
@@ -33,9 +37,18 @@ export default {
     box-sizing: content-box;
     margin: 15px;
     border-radius: 15px;
+    transition: transform 0.25s, border 0.25s;
+    &:hover {
+      transform: scale(1.05);
+      border: solid 1px $primary;
+    }
     @include responsive(tab) {
       flex-direction: column;
       width: 100px;
+    }
+    @include responsive(mob){
+      max-width: 150px;
+      width:100%;
     }
   }
 }

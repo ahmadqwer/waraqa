@@ -41,6 +41,10 @@ export default {
     a {
       color: $white;
       font-size: 25px;
+      transition: transform 0.25s;
+      &:hover{
+        transform:scale(1.1)
+      }
       @include responsive(mob) {
         width: 14px;
       }

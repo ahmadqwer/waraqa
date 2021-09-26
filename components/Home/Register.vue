@@ -1,13 +1,15 @@
 <template>
   <section class="register grid-container">
-    <h2 class="section-title text-center bold-text secondary-text">
-      العمل كموظف مستقل
-    </h2>
-    <p class="text-center grey-text">
-      بإمكانك العمل من المنزل ككاتب أو مدقق محتوى من خلال التسجيل في منصة ورقة
-    </p>
-    <div class="jobs flexed justify-space-between ">
-      <Job v-for="(job, index) in jobs" :key="index" :job="job" />
+    <div class="register-wrapper">
+      <h2 class="section-title text-center bold-text secondary-text">
+        العمل كموظف مستقل
+      </h2>
+      <p class="text-center grey-text">
+        بإمكانك العمل من المنزل ككاتب أو مدقق محتوى من خلال التسجيل في منصة ورقة
+      </p>
+      <div class="jobs flexed justify-space-between ">
+        <Job v-for="(job, index) in jobs" :key="index" :job="job" />
+      </div>
     </div>
   </section>
 </template>
@@ -40,14 +42,20 @@ export default {
   padding-top: 60px;
   padding-bottom: 105px;
   border-bottom: 1px solid $border-color;
+  .register-wrapper {
+    width: 90%;
+    @include responsive(mob) {
+      width: 100%;
+    }
+  }
   .section-title {
     margin-bottom: 35px;
   }
   & > p {
     font-size: 20px;
   }
-  .jobs{
-    @include responsive(mob){
+  .jobs {
+    @include responsive(mob) {
       flex-direction: column;
     }
   }

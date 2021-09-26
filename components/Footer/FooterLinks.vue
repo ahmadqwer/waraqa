@@ -26,10 +26,11 @@ export default {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
   li {
     margin: 0 12.5px;
+
     @include responsive(tab) {
       margin: 10px 9px;
     }
@@ -37,8 +38,15 @@ export default {
       text-decoration: none;
       color: $white;
       font-size: 18px;
+      opacity: 1;
+      transition: opacity 0.25s, transform 0.25s;
       @include responsive(tab) {
         font-size: 16px;
+      }
+    }
+    &:hover {
+      a {
+        opacity: 0.75;
       }
     }
   }

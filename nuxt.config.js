@@ -8,22 +8,62 @@ export default {
     titleTemplate: '%s - ورقة',
     title: 'الصفحة الرئيسية',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ar'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: ' المنصة الاكبر في إنتاج المحتوى العربي الرقمي في العالم ' },
-      { hid: 'keywords', name: 'keywords', content: 'Waraqa,ورقة,ورقه,تدقيق,مدقق,عمل مستقل,موظف مستقل' },
+      {
+        hid: 'robots',
+        name: 'robots',
+        content: 'all'
+      },
+      {
+        hid: 'googlebot',
+        name: 'googlebot',
+        content: 'all'
+      },
+      {
+        hid: 'publisher',
+        name: 'publisher',
+        content: 'Mawdoo3'
+      },
+      {
+        hid: 'author',
+        name: 'author',
+        content: 'Mawdoo3'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ' المنصة الاكبر في إنتاج المحتوى العربي الرقمي في العالم '
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'Waraqa,ورقة,ورقه,تدقيق,مدقق,عمل مستقل,موظف مستقل,كاتب,كتّاب'
+      },
+
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: ' المنصة الاكبر في إنتاج المحتوى العربي الرقمي في العالم '
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/waraqa/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/waraqa/favicon.ico' },
+      {
+        rel: 'canonical',
+        href: 'http://13.37.164.215/waraqa/'
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/scss/styles.scss'],
   styleResources: {
-    scss: ['./assets/scss/_variables.scss','./assets/scss/_mixins.scss']
+    scss: ['./assets/scss/_variables.scss', './assets/scss/_mixins.scss']
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -35,7 +75,7 @@ export default {
     { path: '~/components/Home', extensions: ['vue'] },
     { path: '~/components/Footer', extensions: ['vue'] }
   ],
-
+  layoutTransition: 'layout',
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -45,7 +85,7 @@ export default {
     '@nuxtjs/fontawesome',
     '@nuxtjs/style-resources',
     'nuxt-compress',
-    '@nuxtjs/device',
+    '@nuxtjs/device'
   ],
   device: {
     refreshOnResize: true
@@ -60,7 +100,7 @@ export default {
         set: '@fortawesome/free-brands-svg-icons',
         icons: ['fab']
       }
-    ],
+    ]
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -68,13 +108,13 @@ export default {
       'nuxt-compress',
       {
         gzip: {
-          threshold: 8192,
+          threshold: 8192
         },
         brotli: {
-          threshold: 8192,
-        },
-      },
-    ],
+          threshold: 8192
+        }
+      }
+    ]
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -98,8 +138,8 @@ export default {
     // Setting up cache for 'static' directory - a year in milliseconds
     // https://web.dev/uses-long-cache-ttl
     static: {
-      maxAge: 60 * 60 * 24 * 365 * 1000,
-    },
+      maxAge: 60 * 60 * 24 * 365 * 1000
+    }
   },
   router: {
     base: '/waraqa/'

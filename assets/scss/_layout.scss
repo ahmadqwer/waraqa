@@ -12,14 +12,14 @@ body {
     flex-direction: column;
 }
 
-.flex-wrap{
+.flex-wrap {
     flex-wrap: wrap;
 }
 .justify-center {
     justify-content: center;
 }
-.self-center{
-    align-self:center ;
+.self-center {
+    align-self: center;
 }
 .align-center {
     align-items: center;
@@ -31,19 +31,19 @@ body {
 
 .block-container {
     max-width: 1300px;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 100%;
     margin: 0 auto;
 }
 
 .grid-container {
     max-width: 1070px;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
 }
-.inline-flex{
+.inline-flex {
     display: inline-flex;
 }
 ul {
@@ -52,16 +52,18 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-.hide-mobile{
-    @include responsive(tab){
-        display:none;
+.hide-mobile {
+    @include responsive(tab) {
+        display: none;
     }
 }
-.hide-desktop{
-    @include responsive(op){
-        display:none;
+.hide-desktop {
+    @include responsive(op) {
+        display: none;
     }
 }
+
+
 .white-text {
     color: $white;
 }

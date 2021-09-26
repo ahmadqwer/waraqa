@@ -2,9 +2,9 @@
   <section class="intro block-container">
     <div class="intro-wrapper">
       <div class="intro-text-wrapper flexed-column justify-center">
-        <p class="welcome white-text bold-text">
+        <h1 class="welcome white-text bold-text">
           مرحباً بك في منصة ورقة
-        </p>
+        </h1>
         <p class="caption white-text">
           المنصة الاكبر في إنتاج المحتوى العربي الرقمي في العالم
         </p>
@@ -21,14 +21,16 @@ export default {}
 <style lang="scss" scoped>
 .intro {
   position: relative;
-  @include responsive(tab) {
-   padding:0;
-  }
   .intro-wrapper {
     background-image: url('~/assets/images/banner.jpg');
-    background-position: center;
+    background-position: top center;
     border-top-right-radius: 88px;
     border-bottom-left-radius: 88px;
+    @include responsive(mob) {
+      padding-top:50px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
   }
   .intro-text-wrapper {
     padding-right: 55px;
@@ -36,6 +38,11 @@ export default {}
     @include responsive(tab) {
       height: 350px;
       padding-right: 25px;
+    }
+
+    @include responsive(mob) {
+      padding-top:0;
+      align-items: center;
     }
   }
   .button {
